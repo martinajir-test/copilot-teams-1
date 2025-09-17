@@ -1,0 +1,17 @@
+{
+  "name": "copilot-teams-1",
+  "version": "1.0.0",
+  "description": "A simple Node.js project with testing infrastructure using Jest",
+  "main": "src/utils.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.1.3"
+  }
+}
