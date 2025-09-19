@@ -11,11 +11,11 @@ This project includes:
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+- Clone the repository
+- Install dependencies:
+  ```bash
+  npm install
+  ```
 
 ## Usage
 
@@ -42,11 +42,6 @@ console.log(isEmpty('hello')); // false
 
 ## Functions
 
-### `add(a, b)`
-Adds two numbers and returns the result.
-
-### `multiply(a, b)`
-Multiplies two numbers and returns the result.
-
-### `isEmpty(str)`
-Checks if a string is empty or contains only whitespace.
+- **`add(a, b)`** - Adds two numbers and returns the result.
+- **`multiply(a, b)`** - Multiplies two numbers and returns the result.
+- **`isEmpty(str)`** - Checks if a string is empty or contains only whitespace.
