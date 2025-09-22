@@ -1,0 +1,13 @@
+{
+  "name": "copilot-teams-1",
+  "version": "1.0.0",
+  "description": "A simple greeting application that responds to 'hey'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": ["greeting", "hello", "copilot"],
+  "author": "",
+  "license": "MIT"
+}
