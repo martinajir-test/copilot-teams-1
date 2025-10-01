@@ -1,0 +1,11 @@
+{
+  "name": "copilot-teams-1",
+  "version": "1.0.0",
+  "description": "Test repository for copilot teams",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
