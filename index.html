@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Your Dashboard</h1>
+        </header>
+        
+        <main>
+            <div class="greeting-section">
+                <h2>Greeting Feature</h2>
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <button id="greetBtn">Say Hello</button>
+                <div id="greetingMessage"></div>
+            </div>
+            
+            <div class="stats-section">
+                <h2>Quick Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Visitors</h3>
+                        <p class="stat-number" id="visitCount">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Users</h3>
+                        <p class="stat-number">42</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tasks Completed</h3>
+                        <p class="stat-number">128</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
