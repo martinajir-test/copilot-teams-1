@@ -1,8 +1,6 @@
 // Visit counter functionality
-let visitCount = 0;
-
 function updateVisitCount() {
-    visitCount = parseInt(localStorage.getItem('visitCount') || '0');
+    let visitCount = parseInt(localStorage.getItem('visitCount') || '0');
     visitCount++;
     localStorage.setItem('visitCount', visitCount.toString());
     document.getElementById('visitCount').textContent = visitCount;
