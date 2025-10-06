@@ -50,12 +50,16 @@ function closeDialog() {
 // Show toast notification
 function showToast(message, duration = 3000) {
     const toast = document.getElementById('toast');
-    toast.querySelector('span').textContent = message;
-    toast.classList.add('show');
+    const messageSpan = toast.querySelector('span');
     
-    setTimeout(() => {
-        toast.classList.remove('show');
-    }, duration);
+    if (messageSpan) {
+        messageSpan.textContent = message;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, duration);
+    }
 }
 
 // Initialize the app
