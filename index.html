@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to User Preferences Demo</h1>
+        <p>Click the button below to open your preferences</p>
+        <button id="openPreferences" class="btn-primary">Open Preferences</button>
+        
+        <div id="currentPreferences" class="preferences-display">
+            <h2>Current Preferences:</h2>
+            <p>Theme: <span id="currentTheme">Light</span></p>
+            <p>Notifications: <span id="currentNotifications">Enabled</span></p>
+            <p>Language: <span id="currentLanguage">English</span></p>
+        </div>
+    </div>
+
+    <!-- Preferences Dialog -->
+    <div id="preferencesDialog" class="dialog-overlay">
+        <div class="dialog">
+            <div class="dialog-header">
+                <h2>User Preferences</h2>
+                <button id="closeDialog" class="close-btn">&times;</button>
+            </div>
+            <div class="dialog-content">
+                <form id="preferencesForm">
+                    <div class="form-group">
+                        <label for="theme">Theme:</label>
+                        <select id="theme" name="theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="auto">Auto</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notifications">Notifications:</label>
+                        <select id="notifications" name="notifications">
+                            <option value="enabled">Enabled</option>
+                            <option value="disabled">Disabled</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="language">Language:</label>
+                        <select id="language" name="language">
+                            <option value="english">English</option>
+                            <option value="spanish">Spanish</option>
+                            <option value="french">French</option>
+                            <option value="german">German</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Preferences</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
