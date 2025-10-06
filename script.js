@@ -47,6 +47,17 @@ function closeDialog() {
     dialog.classList.remove('active');
 }
 
+// Show toast notification
+function showToast(message, duration = 3000) {
+    const toast = document.getElementById('toast');
+    toast.querySelector('span').textContent = message;
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, duration);
+}
+
 // Initialize the app
 function init() {
     // Load and display current preferences
@@ -80,7 +91,7 @@ function init() {
         closeDialog();
         
         // Show success message
-        alert('Preferences saved successfully!');
+        showToast('✓ Preferences saved successfully!');
     });
     
     // Keyboard support - Escape key to close dialog

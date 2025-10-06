@@ -193,3 +193,35 @@ p {
     gap: 1rem;
     margin-top: 2rem;
 }
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #4caf50;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slideInUp 0.3s ease;
+    z-index: 2000;
+}
+
+.toast.show {
+    display: flex;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
