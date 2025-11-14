@@ -12,7 +12,7 @@ class Calculator {
     }
 
     appendNumber(number) {
-        if (this.shouldResetDisplay) {
+        if (this.currentValue === 'Error' || this.shouldResetDisplay) {
             this.currentValue = number;
             this.shouldResetDisplay = false;
         } else {
@@ -69,8 +69,11 @@ class Calculator {
                 break;
             case '/':
                 if (current === 0) {
-                    alert('Cannot divide by zero!');
-                    this.clear();
+                    this.currentValue = 'Error';
+                    this.operation = null;
+                    this.previousValue = '';
+                    this.shouldResetDisplay = true;
+                    this.updateDisplay();
                     return;
                 }
                 result = prev / current;
@@ -95,7 +98,13 @@ class Calculator {
     }
 
     delete() {
+        if (this.currentValue === 'Error') {
+            this.clear();
+            return;
+        }
         if (this.currentValue.length === 1 || this.currentValue === '0') {
+            this.currentValue = '0';
+        } else if (this.currentValue.length === 2 && this.currentValue.startsWith('-')) {
             this.currentValue = '0';
         } else {
             this.currentValue = this.currentValue.slice(0, -1);
