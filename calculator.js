@@ -26,7 +26,7 @@ class Calculator {
     }
 
     appendDecimal() {
-        if (this.shouldResetDisplay) {
+        if (this.currentValue === 'Error' || this.shouldResetDisplay) {
             this.currentValue = '0.';
             this.shouldResetDisplay = false;
         } else if (!this.currentValue.includes('.')) {
@@ -36,6 +36,9 @@ class Calculator {
     }
 
     appendOperator(operator) {
+        if (this.currentValue === 'Error') {
+            return;
+        }
         if (this.operation !== null) {
             this.calculate();
         }
