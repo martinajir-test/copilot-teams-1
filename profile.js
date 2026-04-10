@@ -47,7 +47,14 @@ function getInitials(name) {
  * @returns {boolean}
  */
 function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!email || typeof email !== 'string') return false;
+    const parts = email.split('@');
+    if (parts.length !== 2) return false;
+    const [local, domain] = parts;
+    if (!local || !domain) return false;
+    if (local.includes(' ') || domain.includes(' ')) return false;
+    const domainParts = domain.split('.');
+    return domainParts.length >= 2 && domainParts.every(p => p.length > 0);
 }
 
 /**
